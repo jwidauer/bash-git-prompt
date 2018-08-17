@@ -507,6 +507,10 @@ function updatePrompt() {
   git_status_fields=($("$__GIT_STATUS_CMD" 2>/dev/null))
 
   export GIT_BRANCH=$(replaceSymbols ${git_status_fields[0]})
+  if (( ${#GIT_BRANCH} > 20 )); then
+    GIT_BRANCH="${GIT_BRANCH:0:20}..."
+  fi
+
   local GIT_REMOTE="$(replaceSymbols ${git_status_fields[1]})"
   if [[ "." == "$GIT_REMOTE" ]]; then
     unset GIT_REMOTE
