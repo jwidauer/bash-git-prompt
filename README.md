@@ -108,7 +108,7 @@ fi
 
 ```sh
 cd ~
-git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
+git clone https://github.com/jwidauer/bash-git-prompt.git .bash-git-prompt --depth=1
 ```
 
 Add to the `~/.bashrc`:
